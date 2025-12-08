@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Dimension20 by DropoutTV - Plateforme de jeu de rôle narrative">
+    <title>Dimension20 by DropoutTV - Présentation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- HEADER -->
+    <header>
+        <div class="header-container">
+            <h1>Dimension20</h1>
+            <img src="images/dimension20-banner.png" alt="Logo de Dimension20" class="logo">
+            <p class="tagline">by DropoutTV</p>
+        </div>
+    </header>
+
+    <!-- NAVIGATION -->
+    <nav>
+        <ul>
+            <li><a href="#presentation">Présentation</a></li>
+            <li><a href="#contenu">Contenu</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- CONTENU PRINCIPAL -->
+    <main>
+        <!-- SECTION PRÉSENTATION -->
+        <section id="presentation">
+            <div class="container">
+                <h2>Qu'est-ce que Dimension20 ?</h2>
+                <div class="presentation-content">
+                    <figure>
+                        <img src="images/dimension20-Image.jpg" alt="Logo de Dimension20">
+                        <figcaption>Dimension20 - Plateforme de contenu narratif premium</figcaption>
+                    </figure>
+                    <article>
+                        <p>
+                            Dimension20 est une plateforme de streaming créée par DropoutTV qui présente des campagnes de jeu de rôle
+                            narrative produits professionnellement. Chaque campagne transporte les spectateurs dans des mondes fantastiques,
+                            de science-fiction et d'aventure.
+                        </p>
+                        <p>
+                            Avec des joueurs talentueux, des maîtres de jeu créatifs et une cinématographie de haut niveau,
+                            Dimension20 offre une expérience de contenu immersive unique. Les campagnes durent plusieurs mois et
+                            combinent le jeu de rôle classique avec une production télévisée haut de gamme.
+                        </p>
+                        <h3>Points forts de Dimension20 :</h3>
+                        <ul>
+                            <li>Campagnes narratives complexes et engageantes</li>
+                            <li>Production professionnelle et cinématographie</li>
+                            <li>Joueurs et créateurs talentueuxnos</li>
+                            <li>Contenu exclusif et original</li>
+                            <li>Communauté mondiale passionnée</li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION VIDÉO -->
+        <section id="contenu">
+            <div class="container">
+                <h2>Découvrez une campagne Dimension20</h2>
+                <div class="video-container">
+                    <video 
+                        controls 
+                        width="800" 
+                        height="450"
+                        aria-label="Bande annonce de campagne Dimension20">
+                        <source src="video/dimension20-teaser.mp4" type="video/mp4">
+                        <track 
+                            kind="captions" 
+                            src="subtitles/cc-fr.vtt" 
+                            srclang="fr" 
+                            label="Français">
+                        <track
+                            kind="captions" 
+                            src="subtitles/cc-en.vtt" 
+                            srclang="en" 
+                            label="English">
+                        Votre navigateur ne supporte pas la balise vidéo HTML5.
+                    </video>
+                </div>
+                <p class="video-description">
+                    Regardez cet extrait d'une campagne Dimension20 pour découvrir l'atmosphère unique et l'engagement
+                    des joueurs dans ces mondes narratifs fascinants. Les sous-titres sont disponibles en français.
+                </p>
+            </div>
+        </section>
+
+        <!-- SECTION FORMULAIRE DE CONTACT -->
+        <section id="contact">
+            <div class="container">
+                <h2>Nous Contacter</h2>
+                <p>Avez-vous des questions sur Dimension20 ou souhaitez-vous nous envoyer vos impressions ?
+                    Remplissez le formulaire ci-dessous.</p>
+                
+                <form class="contact-form" method="POST" action="traiter-contact.php">
+                    <div class="form-group">
+                        <label for="nom">Nom <span aria-label="requis">*</span></label>
+                        <input 
+                            type="text" 
+                            id="nom" 
+                            name="nom" 
+                            required 
+                            aria-required="true"
+                            aria-describedby="nom-help">
+                        <span id="nom-help" class="help-text">Veuillez entrer votre nom complet</span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Adresse Email <span aria-label="requis">*</span></label>
+                        <input 
+                            type="email" 
+                            id="email" 
+                            name="email" 
+                            required 
+                            aria-required="true"
+                            aria-describedby="email-help">
+                        <span id="email-help" class="help-text">Format: exemple@domaine.com</span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="campagne">Campagne préférée <span aria-label="optionnel">(optionnel)</span></label>
+                        <select id="campagne" name="campagne" aria-describedby="campagne-help">
+                            <option value="">-- Sélectionnez une campagne --</option>
+                            <option value="critical-role">Critical Role Campaign</option>
+                            <option value="dungeons-of-drakkenheim">Dungeons of Drakkenheim</option>
+                            <option value="court-of-dying-light">Court of the Dying Light</option>
+                            <option value="exandria-unlimited">Exandria Unlimited</option>
+                            <option value="autre">Autre</option>
+                        </select>
+                        <span id="campagne-help" class="help-text">Sélectionnez votre campagne préférée</span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Votre message <span aria-label="requis">*</span></label>
+                        <textarea 
+                            id="message" 
+                            name="message" 
+                            rows="5" 
+                            required 
+                            aria-required="true"
+                            aria-describedby="message-help"></textarea>
+                        <span id="message-help" class="help-text">Décrivez votre question ou commentaire</span>
+                    </div>
+
+                    <div class="form-group checkbox">
+                        <input 
+                            type="checkbox" 
+                            id="newsletter" 
+                            name="newsletter"
+                            aria-describedby="newsletter-help">
+                        <label for="newsletter">Je souhaite recevoir les actualités de Dimension20</label>
+                        <span id="newsletter-help" class="help-text">Vous pourrez vous désabonner à tout moment</span>
+                    </div>
+
+                    <button type="submit" class="btn-submit">Envoyer votre message</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>À propos</h3>
+                    <p>Dimension20 est une production de DropoutTV dédiée aux histoires narratives immersives et au jeu de rôle créatif.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Liens utiles</h3>
+                    <ul>
+                        <li><a href="https://watch.dropout.tv/dimension-20" target="_blank" rel="noopener noreferrer">Site officiel DropoutTV</a></li>
+                        <li><a href="https://www.instagram.com/dimension20show/" target="_blank" rel="noopener noreferrer">Dimension20 sur les réseaux</a></li>
+                        <li><a href="#" target="_blank" rel="noopener noreferrer">Conditions d'utilisation</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Accessibilité</h3>
+                    <p>Ce site est conçu selon les normes WCAG 2.1 AA pour assurer l'accessibilité à tous les utilisateurs.</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Dimension20 by DropoutTV. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Amélioration de l'accessibilité au clavier
+        document.querySelectorAll('a[href^="#"]').forEach(link => {
+            link.addEventListener('click', (e) => {
+                const target = document.querySelector(link.getAttribute('href'));
+                if (target) {
+                    target.setAttribute('tabindex', '-1');
+                    target.focus();
+                }
+            });
+        });
+    </script>
+</body>
+</html>
