@@ -35,7 +35,7 @@
                 <div class="presentation-content">
                     <figure>
                         <img src="images/dimension20-Image.jpg" alt="Logo de Dimension20">
-                        <figcaption>Dimension20 - Plateforme de contenu narratif premium</figcaption>
+                        <figcaption>Casting de "Fantasy High" par Dimension20</figcaption>
                     </figure>
                     <article>
                         <p>
@@ -52,10 +52,28 @@
                         <ul>
                             <li>Campagnes narratives complexes et engageantes</li>
                             <li>Production professionnelle et cinématographie</li>
-                            <li>Joueurs et créateurs talentueuxnos</li>
+                            <li>Joueurs et créateurs talentueux</li>
                             <li>Contenu exclusif et original</li>
                             <li>Communauté mondiale passionnée</li>
                         </ul>
+
+                        <h3>Glossaire des termes</h3>
+                        <dl>
+                            <dt>Streaming:</dt>
+                            <dd>Diffusion en continu de contenu vidéo ou audio sur Internet. Dimension20 est une plateforme de streaming créée par DropoutTV.</dd>
+
+                            <dt>Campagne:</dt>
+                            <dd>Une série d'épisodes ou de sessions de jeu de rôle formant une histoire complète. Chaque campagne de Dimension20 transporte les spectateurs dans des mondes fantastiques.</dd>
+
+                            <dt>Cinématographie:</dt>
+                            <dd>L'art de la production vidéo et de la mise en scène. Dimension20 offre une cinématographie de haut niveau combinée à la production télévisée.</dd>
+
+                            <dt>Immersive:</dt>
+                            <dd>Qui absorbe complètement l'attention. Dimension20 offre une expérience de contenu immersive unique grâce à ses productions professionnelles.</dd>
+
+                            <dt>Maître de jeu:</dt>
+                            <dd>La personne créative qui dirige la campagne et guide les joueurs. Les maîtres de jeu de Dimension20 sont reconnus pour leur talent et leur créativité.</dd>
+                        </dl>
                     </article>
                 </div>
             </div>
@@ -101,33 +119,32 @@
                 
                 <form class="contact-form" method="POST" action="traiter-contact.php">
                     <div class="form-group">
-                        <label for="nom">Nom <span aria-label="requis">*</span></label>
+                        <label for="nom">Nom <span class="required">*</span></label>
                         <input 
                             type="text" 
                             id="nom" 
                             name="nom" 
                             required 
-                            aria-required="true"
                             aria-describedby="nom-help">
                         <span id="nom-help" class="help-text">Veuillez entrer votre nom complet</span>
                     </div>
 
                     <div class="form-group">
-                        <label for="email">Adresse Email <span aria-label="requis">*</span></label>
+                        <label for="email">Adresse Email <span class="required">*</span></label>
                         <input 
                             type="email" 
                             id="email" 
                             name="email" 
                             required 
-                            aria-required="true"
                             aria-describedby="email-help">
                         <span id="email-help" class="help-text">Format: exemple@domaine.com</span>
                     </div>
 
                     <div class="form-group">
-                        <label for="campagne">Campagne préférée <span aria-label="optionnel">(optionnel)</span></label>
+                        <label for="campagne">Campagne préférée <span class="optional">(optionnel)</span></label>
                         <select id="campagne" name="campagne" aria-describedby="campagne-help">
                             <option value="">-- Sélectionnez une campagne --</option>
+                            <option value="fantasy-high">Fantasy High</option>
                             <option value="critical-role">Critical Role Campaign</option>
                             <option value="dungeons-of-drakkenheim">Dungeons of Drakkenheim</option>
                             <option value="court-of-dying-light">Court of the Dying Light</option>
@@ -138,13 +155,12 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="message">Votre message <span aria-label="requis">*</span></label>
+                        <label for="message">Votre message <span class="required">*</span></label>
                         <textarea 
                             id="message" 
                             name="message" 
                             rows="5" 
                             required 
-                            aria-required="true"
                             aria-describedby="message-help"></textarea>
                         <span id="message-help" class="help-text">Décrivez votre question ou commentaire</span>
                     </div>
