@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Dimension20 by DropoutTV - Plateforme de jeu de rôle narrative">
+    <title>Dimension20 by DropoutTV - Accueil</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- HEADER -->
+    <header>
+        <div class="header-container">
+            <h1>Dimension20</h1>
+            <img src="images/dimension20-banner.png" alt="Logo de Dimension20" class="logo">
+            <p class="tagline">by DropoutTV</p>
+        </div>
+    </header>
+
+    <!-- NAVIGATION -->
+    <nav>
+        <ul>
+            <li><a href="accueil.html">Accueil</a></li>
+            <li><a href="produit.html">Produit</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- CONTENU PRINCIPAL -->
+    <main>
+        <!-- SECTION PRÉSENTATION -->
+        <section id="presentation">
+            <div class="container">
+                <h2>Qu'est-ce que Dimension20 ?</h2>
+                <div class="presentation-content">
+                    <figure>
+                        <img src="images/dimension20-Image.jpg" alt="Logo de Dimension20">
+                        <figcaption>Casting de "Fantasy High" par Dimension20</figcaption>
+                    </figure>
+                    <article>
+                        <p>
+                            Dimension20 est une plateforme de streaming créée par DropoutTV qui présente des campagnes de jeu de rôle
+                            narrative produits professionnellement. Chaque campagne transporte les spectateurs dans des mondes fantastiques,
+                            de science-fiction et d'aventure.
+                        </p>
+                        <p>
+                            Avec des joueurs talentueux, des maîtres de jeu créatifs et une cinématographie de haut niveau,
+                            Dimension20 offre une expérience de contenu immersive unique. Les campagnes durent plusieurs mois et
+                            combinent le jeu de rôle classique avec une production télévisée haut de gamme.
+                        </p>
+                        <h3>Points forts de Dimension20 :</h3>
+                        <ul>
+                            <li>Campagnes narratives complexes et engageantes</li>
+                            <li>Production professionnelle et cinématographie</li>
+                            <li>Joueurs et créateurs talentueux</li>
+                            <li>Contenu exclusif et original</li>
+                            <li>Communauté mondiale passionnée</li>
+                        </ul>
+                    </article>
+                </div>
+
+                <div class="cta-section">
+                    <h3>Découvrir notre produit</h3>
+                    <p>Explorez en détail ce que Dimension20 offre à ses spectateurs.</p>
+                    <a href="produit.html" class="btn-primary">Voir la fiche produit</a>
+                </div>
+
+                <h3 id="glossaire">Glossaire des termes</h3>
+                <dl>
+                    <dt>Streaming:</dt>
+                    <dd>Diffusion en continu de contenu vidéo ou audio sur Internet. Dimension20 est une plateforme de streaming créée par DropoutTV.</dd>
+
+                    <dt>Campagne:</dt>
+                    <dd>Une série d'épisodes ou de sessions de jeu de rôle formant une histoire complète. Chaque campagne de Dimension20 transporte les spectateurs dans des mondes fantastiques.</dd>
+
+                    <dt>Cinématographie:</dt>
+                    <dd>L'art de la production vidéo et de la mise en scène. Dimension20 offre une cinématographie de haut niveau combinée à la production télévisée.</dd>
+
+                    <dt>Immersive:</dt>
+                    <dd>Qui absorbe complètement l'attention. Dimension20 offre une expérience de contenu immersive unique grâce à ses productions professionnelles.</dd>
+
+                    <dt>Maître de jeu:</dt>
+                    <dd>La personne créative qui dirige la campagne et guide les joueurs. Les maîtres de jeu de Dimension20 sont reconnus pour leur talent et leur créativité.</dd>
+                </dl>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Navigation</h3>
+                    <ul>
+                        <li><a href="accueil.html">Accueil</a></li>
+                        <li><a href="produit.html">Fiche Produit</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="a-propos.html">À propos</a></li>
+                        <li><a href="accueil.html#glossaire">Glossaire</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Ressources</h3>
+                    <ul>
+                        <li><a href="https://watch.dropout.tv/dimension-20" target="_blank" rel="noopener noreferrer">Site officiel DropoutTV</a></li>
+                        <li><a href="https://www.instagram.com/dimension20show/" target="_blank" rel="noopener noreferrer">Dimension20 sur les réseaux</a></li>
+                        <li><a href="#" target="_blank" rel="noopener noreferrer">Conditions d'utilisation</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Accessibilité</h3>
+                    <p>Ce site est conçu selon les normes WCAG 2.1 AA pour assurer l'accessibilité à tous les utilisateurs.</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Dimension20 by DropoutTV. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(link => {
+            link.addEventListener('click', (e) => {
+                const target = document.querySelector(link.getAttribute('href'));
+                if (target) {
+                    target.setAttribute('tabindex', '-1');
+                    target.focus();
+                }
+            });
+        });
+    </script>
+</body>
+</html>
