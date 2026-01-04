@@ -90,6 +90,20 @@ Le projet a été validé avec les outils suivants :
 - **Lighthouse** - Audit de performance et d'accessibilité (rapports disponibles dans `Rapports Lighthouse/`)
 - **WAVE** - Vérification de l'accessibilité web (résultats dans `Résultat WAVE/`)
 
+### Résultats WAVE (Web Accessibility Evaluation Tool)
+
+#### Page Accueil
+![Rapport WAVE Accueil](Résultat%20WAVE/Rapport%20WAVE%20Accueil.png)
+
+#### Page À Propos
+![Rapport WAVE A Propos](Résultat%20WAVE/Rapport%20WAVE%20A%20Propos.png)
+
+#### Page Produit
+![Rapport WAVE Produit](Résultat%20WAVE/Rapport%20WAVE%20Produit.png)
+
+#### Page Contact
+![Rapport WAVE Contact](Résultat%20WAVE/Rapport%20WAVE%20Contact.png)
+
 ## Technologies Utilisées
 
 - **HTML5** - Structure sémantique
