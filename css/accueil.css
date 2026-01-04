@@ -1,0 +1,82 @@
+.presentation-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: start;
+}
+
+.presentation-content figure {
+    margin: 0;
+}
+
+.presentation-content img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    display: block;
+}
+
+.presentation-content figcaption {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: #4f5968;
+    text-align: center;
+}
+
+.presentation-content article p {
+    margin-bottom: 15px;
+    color: var(--text-dark);
+    line-height: 1.8;
+}
+
+.presentation-content ul {
+    list-style-position: inside;
+    margin-left: 0;
+}
+
+.presentation-content li {
+    margin-bottom: 10px;
+    padding-left: 10px;
+    color: var(--text-dark);
+}
+
+.presentation-content li:before {
+    content: "▸ ";
+    color: var(--primary-color);
+    font-weight: bold;
+    margin-right: 8px;
+}
+
+/* vid */
+.video-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.video-container video {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.video-description {
+    text-align: center;
+    font-size: 1.1rem;
+    color: var(--text-dark);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.video-credit {
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .presentation-content {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}

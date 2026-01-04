@@ -5,18 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Dimension20 - Fiche Produit">
     <title>Dimension20 - Fiche Produit</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/produit.css">
 </head>
 <body>
-    <!-- HEADER -->
     <header>
         <div class="header-container">
-            <img src="images/dimension20-banner.png" alt="Logo de Dimension20" class="logo">
+            <img src="images/dimension20-banner.png" alt="Logo Dimension20 - Plateforme de diffusion de jeux de rôle cinématographiques par DropoutTV" class="logo">
             <p class="tagline">by DropoutTV</p>
         </div>
     </header>
 
-    <!-- NAVIGATION -->
     <nav>
         <ul>
             <li><a href="accueil.html">Accueil</a></li>
@@ -25,50 +24,108 @@
         </ul>
     </nav>
 
-    <!-- CONTENU PRINCIPAL -->
     <main>
-        <!-- SECTION CARROUSEL ACCESSIBLE -->
+        <h1 style="position: absolute; left: -9999px;">Dimension20 - Fiche Produit</h1>
         <section id="carrousel">
             <div class="container">
-                
+                <h2>Campagnes en vedette</h2>
+                <div class="carousel" role="region" aria-label="Carrousel de campagnes Dimension20" aria-live="polite">
+                    <div class="carousel-controls">
+                        <button id="carousel-pause-btn" class="carousel-btn carousel-pause" aria-pressed="false" title="Mettre en pause le carrousel automatique">
+                            ⏸ Pause
+                        </button>
+                        <button id="carousel-prev-btn" class="carousel-btn carousel-nav" aria-label="Campagne précédente">
+                            ◀ Précédent
+                        </button>
+                        <button id="carousel-next-btn" class="carousel-btn carousel-nav" aria-label="Campagne suivante">
+                            Suivant ▶
+                        </button>
+                    </div>
+                    <div class="carousel-container">
+                        <div class="carousel-slide" role="article">
+                            <img 
+                                src="images/Fantasy-high.jpg" 
+                                alt="Affiche de la campagne Fantasy High" 
+                                class="carousel-img">
+                            <div class="carousel-caption">
+                                <h3>Fantasy High</h3>
+                                <p>Premiere saison de Dimension20 dans un lycée fantastique</p>
+                            </div>
+                        </div>
+                        <div class="carousel-slide" role="article" style="display:none;">
+                            <img 
+                                src="images/Cloudward-Ho.jpg" 
+                                alt="Affiche de la campagne Cloudward, Ho!" 
+                                class="carousel-img">
+                            <div class="carousel-caption">
+                                <h3>Cloudward, Ho!</h3>
+                                <p>Les aventures de l'équipage d'un zeppelin dans un monde steampunk</p>
+                            </div>
+                        </div>
+                        <div class="carousel-slide" role="article" style="display:none;">
+                            <img 
+                                src="images/Ravening.jpg" 
+                                alt="Affiche de la campagne The Ravening war" 
+                                class="carousel-img">
+                            <div class="carousel-caption">
+                                <h3>The Ravening war</h3>
+                                <p>Politique, magie et pouvoir en collision</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-indicators" role="group" aria-label="Slides du carrousel">
+                        <button class="carousel-indicator active" aria-current="true" aria-label="Slide 1"></button>
+                        <button class="carousel-indicator" aria-label="Slide 2"></button>
+                        <button class="carousel-indicator" aria-label="Slide 3"></button>
+                    </div>
+                    <p class="carousel-info">
+                        <strong>Navigation au clavier:</strong> Utilisez les flèches ← → ou Tab pour naviguer entre les campagnes.
+                    </p>
+                </div>
             </div>
         </section>
 
-        <!-- SECTION VIDÉO -->
         <section id="contenu">
             <div class="container">
                 <h2>Découvrez une campagne Dimension20</h2>
                 <div class="video-container">
                     <video 
+                        id="campaign-video"
                         controls 
                         width="800" 
                         height="450"
-                        aria-label="Bande annonce de campagne Dimension20">
+                        aria-label="Bande annonce de campagne Dimension20 - Vidéo avec sous-titres en français et anglais"
+                        aria-describedby="video-description">
                         <source src="video/dimension20-teaser.mp4" type="video/mp4">
                         <track 
                             kind="captions" 
                             src="subtitles/cc-fr.vtt" 
                             srclang="fr" 
-                            label="Français">
+                            label="Français"
+                            default>
                         <track
                             kind="captions" 
                             src="subtitles/cc-en.vtt" 
                             srclang="en" 
                             label="English">
-                        Votre navigateur ne supporte pas la balise vidéo HTML5.
+                        <p>Votre navigateur ne supporte pas la balise vidéo HTML5. <a href="video/dimension20-teaser.mp4">Télécharger la vidéo</a></p>
                     </video>
                 </div>
-                <p class="video-description">
-                    Regardez cet extrait d'une campagne Dimension20 pour découvrir l'atmosphère unique et l'engagement
-                    des joueurs dans ces mondes narratifs fascinants. Les sous-titres sont disponibles en français.
-                </p>
+                <div id="video-description" class="video-description">
+                    <h3>Description de la vidéo</h3>
+                    <p>
+                        Regardez cet extrait d'une campagne Dimension20 pour découvrir l'atmosphère unique et l'engagement
+                        des joueurs dans ces mondes narratifs fascinants. Les sous-titres sont disponibles en français et en anglais.
+                        Cette vidéo présente les éléments clés qui font de Dimension20 une production de haute qualité combinant
+                        jeu de rôle et cinématographie professionnelle.
+                    </p>
+                </div>
                 <p class="video-credit">
                     <a href="https://www.youtube.com/watch?v=k_yp0fqERqI" target="_blank" rel="noopener noreferrer">Animation par Doobly TV</a>
                 </p>
             </div>
         </section>
 
-        <!-- SECTION GLOSSAIRE -->
         <section id="glossaire">
             <div class="container">
                 <h2>Glossaire des termes</h2>
@@ -95,7 +152,6 @@
         </section>
     </main>
 
-    <!-- FOOTER -->
     <footer>
         <div class="container">
             <div class="footer-content">
@@ -114,7 +170,7 @@
                     <ul>
                         <li><a href="https://watch.dropout.tv/dimension-20" target="_blank" rel="noopener noreferrer">Site officiel DropoutTV</a></li>
                         <li><a href="https://www.instagram.com/dimension20show/" target="_blank" rel="noopener noreferrer">Dimension20 sur les réseaux</a></li>
-                        <li><a href="#" target="_blank" rel="noopener noreferrer">Conditions d'utilisation</a></li>
+                        <li>Conditions d'utilisation</li>
                     </ul>
                 </div>
                 <div class="footer-section">
@@ -127,5 +183,6 @@
             </div>
         </div>
     </footer>
+    <script src="js/script.js"></script>
 </body>
 </html>
