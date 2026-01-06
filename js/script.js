@@ -218,6 +218,7 @@ class FormValidator {
     setupRealTimeValidation() {
         const nomInput = this.form.querySelector('#nom');
         const prenomInput = this.form.querySelector('#prenom');
+        const dateNaissanceInput = this.form.querySelector('#dateNaissance');
 
         if (nomInput) {
             nomInput.addEventListener('blur', () => this.validateNomField(nomInput));
@@ -227,6 +228,11 @@ class FormValidator {
         if (prenomInput) {
             prenomInput.addEventListener('blur', () => this.validatePrenomField(prenomInput));
             prenomInput.addEventListener('input', () => this.validatePrenomField(prenomInput));
+        }
+
+        if (dateNaissanceInput) {
+            dateNaissanceInput.addEventListener('blur', () => this.validateDateNaissanceField(dateNaissanceInput));
+            dateNaissanceInput.addEventListener('change', () => this.validateDateNaissanceField(dateNaissanceInput));
         }
     }
 
@@ -240,11 +246,44 @@ class FormValidator {
         this.updateFieldStyle(field, isValid, 'Lettres, accents, tirets et espaces uniquement. Pas de chiffres.');
     }
 
+    validateDateNaissanceField(field) {
+        const isValid = this.isValidBirthDate(field.value);
+        const errorMessage = 'La date de naissance doit être entre 1900 et 2025.';
+        this.updateFieldStyle(field, isValid, errorMessage);
+    }
+
     isValidName(value) {
         // Accepte : lettres (avec accents), tirets, espaces, apostrophes
         // Refuse : chiffres et caractères spéciaux
         const nameRegex = /^[a-zA-ZÀ-ÿ\s\-']{2,}$/;
         return nameRegex.test(value.trim());
+    }
+
+    isValidBirthDate(value) {
+        if (!value) return false;
+        
+        const birthDate = new Date(value);
+        const currentDate = new Date();
+        
+        // Vérifier que la date est valide
+        if (isNaN(birthDate.getTime())) {
+            return false;
+        }
+        
+        const birthYear = birthDate.getFullYear();
+        const currentYear = currentDate.getFullYear();
+        
+        // La personne ne peut pas être née avant 1900 ni après 2025
+        if (birthYear < 1900 || birthYear > 2025) {
+            return false;
+        }
+        
+        // La date ne peut pas être dans le futur
+        if (birthDate > currentDate) {
+            return false;
+        }
+        
+        return true;
     }
 
     updateFieldStyle(field, isValid, errorMessage) {
@@ -282,6 +321,7 @@ class FormValidator {
         // Valider strictement nom et prénom
         const nomInput = this.form.querySelector('#nom');
         const prenomInput = this.form.querySelector('#prenom');
+        const dateNaissanceInput = this.form.querySelector('#dateNaissance');
 
         if (!this.isValidName(nomInput.value)) {
             this.validateNomField(nomInput);
@@ -292,6 +332,12 @@ class FormValidator {
         if (!this.isValidName(prenomInput.value)) {
             this.validatePrenomField(prenomInput);
             prenomInput.focus();
+            return;
+        }
+
+        if (!this.isValidBirthDate(dateNaissanceInput.value)) {
+            this.validateDateNaissanceField(dateNaissanceInput);
+            dateNaissanceInput.focus();
             return;
         }
 
