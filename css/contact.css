@@ -313,6 +313,7 @@ legend {
     outline-offset: 2px;
 }
 
+
 .notification {
     position: fixed;
     bottom: 20px;
@@ -351,6 +352,7 @@ legend {
     border: 1px solid #fca5a5;
 }
 
+/* ===== RESPONSIVE - MOBILE ===== */
 @media (max-width: 768px) {
     .contact-form {
         padding: 20px;
@@ -389,3 +391,4 @@ legend {
     .notification {
         left: 10px;
         right: 10px;
+    }
