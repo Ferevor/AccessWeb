@@ -140,3 +140,32 @@
     border-radius: 4px;
     margin: 0;
 }
+
+.video-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.video-container video {
+    max-width: 100%;
+    height: auto;
+}
+
+.video-description {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 20px;
+    padding: 20px;
+    background-color: var(--light-bg);
+    border-radius: 8px;
+}
+
+.video-description h3 {
+    color: var(--primary-color);
+    margin-top: 0;
+}
+
+.video-credit {
+    text-align: center;
+}
